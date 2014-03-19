@@ -1,4 +1,4 @@
 controldeasistencia
 ===================
 
-Control de Asistencia / OpenCV + SWT + SQLite
+Control de Asistencia / Java + OpenCV + ZXIng + SWT + SQLite
