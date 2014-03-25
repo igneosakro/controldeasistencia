@@ -186,7 +186,7 @@ public class MainView extends Shell {
 		tbclSubjectPassword = new TableColumn(tblSubjects, SWT.NONE);
 		tbclSubjectPassword.setText("Password");
 		tbclSubjectEnrolments = new TableColumn(tblSubjects, SWT.NONE);
-		tbclSubjectEnrolments.setText("Nº Students");
+		tbclSubjectEnrolments.setText("No. Students");
 		
 		ResultSet rs = Globals.DB.query("SELECT s.name AS name, s.password AS password, COUNT(*) AS students " +
 										"FROM register AS r, (SELECT name, password FROM subject) AS s " +
