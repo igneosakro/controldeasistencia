@@ -32,7 +32,6 @@ public class MainView extends Shell {
 	MenuItem fileMenuHeader, fileSaveItem, fileExitItem;
 	Image activeIcon;
 	Image inactiveIcon;
-	boolean isScanning = false;
 	Composite cmpScan;
 	Composite cmpHome;
 	Composite cmpManagement;
@@ -90,7 +89,6 @@ public class MainView extends Shell {
 		camera.setLayoutData(new GridData(SWT.CENTER, SWT.BEGINNING, false, false, 1, 1));
 	    camera.setBounds(0, 0, 100, 100);
 	    camera.setImage(inactiveIcon);
-		isScanning = false;
 		
 		tabFolder = new TabFolder(this, SWT.NONE);
 		tabFolder.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1));
@@ -142,7 +140,7 @@ public class MainView extends Shell {
 		btnStopScan.setText("Stop");
 		btnStopScan.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent evt) {
-				isScanning = false;
+				Globals.running = false;
 				setScanEnabled();
 			}
 		});
@@ -157,8 +155,9 @@ public class MainView extends Shell {
 		btnStartScan.setText("Start");
 		btnStartScan.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent evt) {
-				isScanning = true;
+				Globals.running = true;
 				setScanEnabled();
+				new WebcamQR();
 			}
 		});
 		
@@ -268,7 +267,7 @@ public class MainView extends Shell {
 	}
 	
 	protected void setScanEnabled() {
-		if (isScanning) {
+		if (Globals.running) {
 			btnStartScan.setEnabled(false);
 			btnStopScan.setEnabled(true);
 			camera.setImage(activeIcon);

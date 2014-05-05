@@ -8,4 +8,5 @@ public class Globals {
 	public static final int ADD_SUBJECT = 200;
 	public static final int EDIT_SUBJECT = 201;
 	public static final int DELETE_SUBJECT = 202;
+	public static boolean running = false;
 }

@@ -18,5 +18,9 @@
 	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.7.2.jar"/>
 	<classpathentry kind="lib" path="lib/swt-debug.jar"/>
 	<classpathentry kind="lib" path="lib/swt.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/webcam-capture-0.3.10-RC6.jar"/>
+	<classpathentry kind="lib" path="lib/bridj-0.7-20131007.003529-54.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
